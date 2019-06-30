@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import PostmonAPI from '../services/PostmonAPI';
 import Address from '../components/address';
 
+import '../styles/home.scss';
+
 class Home extends Component {
 
   constructor() {
@@ -26,10 +28,12 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
-        <input type="text" onChange={this.getCep} value={this.state.cep} placeholder="Digite o cep"/>
-        <button type='button' onClick={this.getAddress}>Consultar</button>
-        <Address address={this.state.address}/>
+      <div className='main'>
+        <div className='main-content'>
+          <input type="text" onChange={this.getCep} value={this.state.cep} placeholder="Digite o cep"/>
+          <Address address={this.state.address}/>
+          <button className='btn' type='button' onClick={this.getAddress}>Consultar</button>
+        </div>
       </div>
     )
   }

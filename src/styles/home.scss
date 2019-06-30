@@ -1,0 +1,33 @@
+.main {
+  box-sizing: border-box;
+  flex: 1;
+  margin: 0 auto;
+  padding: 40px 20px;
+  width: 100%;
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      background: rgb(235, 237, 238);
+      border: none;
+      border-bottom: 1px solid;
+      color:  rgb(0, 39, 54);
+      font-size: 1.5em;
+      padding: 10px;
+    }
+  
+    .btn {
+      align-self: center;
+      border: none;
+      box-shadow: inset 0px -3px 3px rgb(130, 138, 131);
+      color:  rgb(0, 39, 54);
+      cursor: pointer;
+      margin: 40px 0;
+      padding: 10px 0;
+      text-transform: uppercase;
+      width: 200px;
+    }
+  }
+}

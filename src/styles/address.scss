@@ -1,0 +1,15 @@
+.table {
+  border-bottom: 1px solid;
+  color:  rgb(0, 39, 54);
+  padding: 40px 0;
+
+  th {
+    display: inline-block;
+    line-height: 2em;
+  }
+
+  td {
+    display: inline-block;
+    margin-left: 10px;
+  }
+}

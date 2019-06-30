@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import '../styles/address.scss';
+
 const Address = ({ address }) => (
-  <table>
+  <table className='table'>
     <tbody>
       {console.log(address)}
       <tr>
