@@ -10,24 +10,34 @@
     flex-direction: column;
 
     input {
-      background: rgb(235, 237, 238);
+      background: rgb(243, 244, 245);
       border: none;
       border-bottom: 1px solid;
       color:  rgb(0, 39, 54);
+      font-family: inherit;
       font-size: 1.5em;
+      text-transform: uppercase;
       padding: 10px;
     }
   
     .btn {
       align-self: center;
+      background-image: radial-gradient(rgb(43, 123, 143) , rgb(0, 39, 54));
       border: none;
       box-shadow: inset 0px -3px 3px rgb(130, 138, 131);
-      color:  rgb(0, 39, 54);
+      color:  rgb(255, 255, 255);
       cursor: pointer;
+      font-family: inherit;
+      font-size: 1.2em;
       margin: 40px 0;
       padding: 10px 0;
       text-transform: uppercase;
+      text-shadow: 0px 3px 2px rgb(10, 35, 59);
       width: 200px;
+    }
+
+    .btn:hover {
+      background-image: radial-gradient(rgb(43, 123, 143) , rgb(1, 54, 75));
     }
   }
 }
