@@ -13,33 +13,45 @@
       background: rgb(243, 244, 245);
       border: none;
       border-bottom: 1px solid;
-      color:  rgb(0, 39, 54);
+      color: rgb(0, 39, 54);
       font-family: inherit;
       font-size: 1.5em;
       text-transform: uppercase;
       padding: 10px;
     }
-  
+
     .btn {
       align-self: center;
-      background: #2B9D79;
+      background: #2b9d79;
       border: none;
-      box-shadow: inset 0px -3px 3px #071F23;
-      color:  rgb(255, 255, 255);
+      box-shadow: inset 0px -3px 3px #071f23;
+      color: rgb(255, 255, 255);
       cursor: pointer;
       font-family: inherit;
       font-size: 1.2em;
       margin: 40px 0;
       padding: 10px 0;
       text-transform: uppercase;
-      text-shadow: 0px 3px 2px #071F23;
-      transition: all .5s ease;
+      text-shadow: 0px 3px 2px #071f23;
+      transition: all 0.5s ease;
       width: 200px;
 
       &:hover {
-        background:#075656;
-        transition: all .5s ease;
+        background: #075656;
+        transition: all 0.5s ease;
       }
-    }   
+    }
+  }
+
+  @media (min-width: 576px) {
+    & {
+      max-width: calc(576px - 20px);
+    }
+  }
+
+  @media (min-width: 768px) {
+    & {
+      max-width: calc(768px - 20px);
+    }
   }
 }
