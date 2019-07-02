@@ -35,11 +35,11 @@
       text-shadow: 0px 3px 2px #071F23;
       transition: all .5s ease;
       width: 200px;
-    }
 
-    .btn:hover {
-      background:#075656;
-      transition: all .5s ease;
-    }
+      &:hover {
+        background:#075656;
+        transition: all .5s ease;
+      }
+    }   
   }
 }

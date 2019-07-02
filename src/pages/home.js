@@ -6,7 +6,7 @@ import Address from '../components/address';
 import '../styles/home.scss';
 
 class Home extends Component {
-  
+
   state = {
     cep: '',
     address: {}
@@ -14,14 +14,18 @@ class Home extends Component {
 
   getCep = (event) => {
     const cepReceived = event.target.value;
-    const cep = cepReceived.match(/\d/g).join('');
+    const cep = cepReceived.replace(/[^0-9]+/g).match(/\d{0,8}/).join('');
+    console.log(cep)
     this.setState({ cep });
   };
 
   getAddress = async () => {
     const cep = this.state.cep;
 
-    if (cep === '') return;
+    if (cep === '' || cep.length < 8) {
+      alert('Digite o CEP com 8 digitos.');
+      return;
+    };
 
     this.setState({ cep: '' });
 
