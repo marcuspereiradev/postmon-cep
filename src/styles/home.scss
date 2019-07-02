@@ -22,9 +22,9 @@
   
     .btn {
       align-self: center;
-      background-image: radial-gradient(rgb(43, 123, 143) , rgb(0, 39, 54));
+      background: #2B9D79;
       border: none;
-      box-shadow: inset 0px -3px 3px rgb(130, 138, 131);
+      box-shadow: inset 0px -3px 3px #071F23;
       color:  rgb(255, 255, 255);
       cursor: pointer;
       font-family: inherit;
@@ -32,12 +32,14 @@
       margin: 40px 0;
       padding: 10px 0;
       text-transform: uppercase;
-      text-shadow: 0px 3px 2px rgb(10, 35, 59);
+      text-shadow: 0px 3px 2px #071F23;
+      transition: all .5s ease;
       width: 200px;
     }
 
     .btn:hover {
-      background-image: radial-gradient(rgb(43, 123, 143) , rgb(1, 54, 75));
+      background:#075656;
+      transition: all .5s ease;
     }
   }
 }
