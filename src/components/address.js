@@ -17,7 +17,7 @@ const Address = ({ address }) => (
 
           return <tbody key={index}>
             <tr>
-              <th>{item[0]}:</th>
+              <th>{item[0].charAt(0).toUpperCase() + item[0].slice(1)}:</th>
             </tr>
             <tr>
               <td>{item[1]}</td>
