@@ -15,14 +15,14 @@ const Address = ({ address }) => (
             item[1] = address.estado_info.nome;
           else if (item[1] === '') return [];
 
-          return <tbody key={index}>
-            <tr>
-              <th>{item[0].charAt(0).toUpperCase() + item[0].slice(1)}:</th>
-            </tr>
-            <tr>
-              <td>{item[1]}</td>
-            </tr>
-          </tbody>
+          return  <tbody key={index}>
+                    <tr>
+                      <th>{item[0]} :</th>
+                    </tr>
+                    <tr>
+                      <td>- {item[1]}</td>
+                    </tr>
+                  </tbody>
         })
     }
   </table>
