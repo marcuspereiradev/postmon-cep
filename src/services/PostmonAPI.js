@@ -7,7 +7,7 @@ class PostmonAPI {
     }
     catch(error) {
       console.error(`Something is wrong in fetchAddress ${error}`);
-      return {};
+      return null;
     }
   }
 };
