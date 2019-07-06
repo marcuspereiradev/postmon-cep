@@ -5,27 +5,18 @@ import '../styles/address.scss';
 
 const Address = ({ address }) => (
 
-  <table className='table'>
-    {
-      Object.entries(address).filter((item) =>
-        !['cidade_info', 'estado_info'].includes(item[0]))
-        .map((item, index) => {
-
-          if (item[0] === 'estado')
-            item[1] = address.estado_info.nome;
-          else if (item[1] === '') return [];
-
-          return  <tbody key={index}>
-                    <tr>
-                      <th>{item[0]} :</th>
-                    </tr>
-                    <tr>
-                      <td>- {item[1]}</td>
-                    </tr>
-                  </tbody>
-        })
-    }
-  </table>
+  <div className='address-content'>
+    <label>Logradouro/Nome:</label>
+    <p>- {address.logradouro}</p>
+    <label>Bairro/Distrito:</label>
+    <p>- {address.bairro}</p>
+    <label>Cidade:</label>
+    <p>- {address.cidade}</p>
+    <label>Estado/UF:</label>
+    <p>- {address.estado_info.nome}/{address.estado}</p>
+    <label>CEP:</label>
+    <p>- {address.cep}</p>
+  </div>
 )
 
 Address.propTypes = {
