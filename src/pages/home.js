@@ -22,6 +22,8 @@ class Home extends Component {
   };
 
   getAddress = async () => {
+    this.setState({ address: false })
+
     const cep = this.state.cep;
 
     if (cep === '' || cep.length < 8) {
@@ -45,8 +47,6 @@ class Home extends Component {
     const enter = event.keyCode;
 
     if (enter === 13) {
-      this.setState({ address: false })
-
       this.getAddress();
     }
   };
