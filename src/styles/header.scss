@@ -1,14 +1,14 @@
 @import './custom_colors';
 
 .header {
-  background-image: radial-gradient($color-medium-green, $color-dark-green);
+  background-image: radial-gradient($color-medium, $color-dark);
   padding: 20px 0;
   text-align: center;
 
   h1 {
     color: $color-white;
     font-size: 1.5em;
-    text-shadow: 0 3px 2px $color-dark-green;
+    text-shadow: 0 3px 2px $color-dark;
 
     &::after {
       background: $color-white;
@@ -24,7 +24,7 @@
   @media (min-width: 768px) {
     h1 {
       font-size: 3em;
-      text-shadow: 0 3px 2px $color-dark-green;
+      text-shadow: 0 3px 2px $color-dark;
     }
   }
 }

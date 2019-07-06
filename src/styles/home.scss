@@ -15,7 +15,7 @@
       background: $color-light-gray;
       border: 0;
       border-bottom: 1px solid;
-      color: $color-dark-green;
+      color: $color-dark;
       font-family: inherit;
       font-size: 1.2em;
       padding: 10px;
@@ -24,22 +24,22 @@
 
     .btn {
       align-self: center;
-      background: $color-soft-green;
+      background: $color-soft;
       border: 0;
-      box-shadow: inset 0 -3px 3px $color-dark-green;
+      box-shadow: inset 0 -3px 3px $color-dark;
       color: $color-white;
       cursor: pointer;
       font-family: inherit;
       font-size: 1em;
       margin: 40px 0;
       padding: 10px 0;
-      text-shadow: 0 3px 2px $color-dark-green;
+      text-shadow: 0 3px 2px $color-dark;
       text-transform: uppercase;
       transition: .5s ease;
       width: 200px;
 
       &:hover {
-        background: $color-medium-green;
+        background: $color-medium;
         transition: .5s ease;
       }
     }
@@ -52,7 +52,7 @@
       margin: 40px 0 0;
       padding: 20px;
       text-align: center;
-      text-shadow: 0 1px 1px $color-dark-green;
+      text-shadow: 0 1px 1px $color-dark;
       text-transform: uppercase;
     }
   }

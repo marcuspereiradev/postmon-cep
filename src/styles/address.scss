@@ -6,19 +6,19 @@
   padding: 40px 0;
 
   label {
-    background: $color-medium-green;
-    border-top: 5px solid $color-dark-green;
+    background: $color-medium;
+    border-top: 5px solid $color-dark;
     color: $color-white;
     display: block;
     line-height: 2em;
     padding: 3px 0 5px 20px;
-    text-shadow: 0 3px 2px $color-dark-green;
+    text-shadow: 0 3px 2px $color-dark;
     text-transform: capitalize;
   }
 
   p {
     background: $color-light-gray;
-    color: $color-dark-green;
+    color: $color-dark;
     display: block;
     margin: 0;
     padding: 10px 30px;
