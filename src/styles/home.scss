@@ -55,6 +55,18 @@
       text-shadow: 0 1px 1px $color-dark;
       text-transform: uppercase;
     }
+
+    .cep-warning {
+      background: $color-light-yellow;
+      border: 1px solid $color-yellow;
+      color: $color-yellow;
+      font-size: 1em;
+      margin: 40px 0 0;
+      padding: 20px;
+      text-align: center;
+      text-shadow: 0 1px 1px $color-dark;
+      text-transform: uppercase;
+    }
   }
 
   @media (min-width: 576px) {

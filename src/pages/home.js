@@ -11,36 +11,34 @@ class Home extends Component {
   state = {
     cep: '',
     address: null,
-    isFetching: false
+    isFetching: false,
+    hasNoCep: false
   };
 
   setCep = (event) => {
     const cepReceived = event.target.value;
     const cep = cepReceived.replace(/[^0-9]+/g).match(/\d{0,8}/).join('');
 
-    this.setState({ cep, address: false });
+    this.setState({ cep, address: false, hasNoCep: false });
   };
 
   getAddress = async () => {
-    this.setState({ address: false })
+    this.setState({ address: false, isFetching: true })
 
     const cep = this.state.cep;
 
     if (cep === '' || cep.length < 8) {
-      alert('Digite o CEP com 8 digitos.');
+      this.setState({ hasNoCep: true, isFetching: false })
       return;
     };
 
-    this.setState({ isFetching: true });
-
     setTimeout(async () => {
       const address = await PostmonAPI.fetchAddress(cep);
-  
+
       this.setState({ address });
-  
+
       this.setState({ isFetching: false })
     }, 2000);
-
   };
 
   getEnter = (event) => {
@@ -64,9 +62,14 @@ class Home extends Component {
             placeholder="Digite o cep"
           />
           {this.state.isFetching && <Loading />}
+          {this.state.hasNoCep && <p className='cep-warning'>Digite o CEP com 8 digitos.</p>}
           {this.state.address === undefined && <p className='cep-error'>CEP inválido ou ele não existe!</p>}
           {this.state.address && <Address address={this.state.address} />}
-          <button className='btn' type='button' onClick={this.getAddress}>Consultar</button>
+          <button
+            className='btn'
+            disabled={this.state.isFetching}
+            type='button' onClick={this.getAddress}>Consultar
+          </button>
         </div>
       </div>
     )
