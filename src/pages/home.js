@@ -66,9 +66,10 @@ class Home extends Component {
           {this.state.address === undefined && <p className='cep-error'>CEP inválido ou ele não existe!</p>}
           {this.state.address && <Address address={this.state.address} />}
           <button
-            className='btn'
+            className={this.state.isFetching ? 'btn disabled' : 'btn'}
             disabled={this.state.isFetching}
-            type='button' onClick={this.getAddress}>Consultar
+            type='button'
+            onClick={this.getAddress}>Consultar
           </button>
         </div>
       </div>
